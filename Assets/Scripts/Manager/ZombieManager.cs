@@ -55,6 +55,7 @@ public class ZombieManager : MonoBehaviour
     IEnumerator SpawnZombie()
     {
         yield return new WaitForSeconds(10);
+        AudioManager.Instance.PlayClip(Config.firstwave);
         // 第一波
         for (int i = 0; i < 10; i++)
         {
@@ -63,6 +64,7 @@ public class ZombieManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(10);
+        AudioManager.Instance.PlayClip(Config.secondwave);
         // 第二波
         for (int i = 0; i < 20; i++)
         {
@@ -72,8 +74,8 @@ public class ZombieManager : MonoBehaviour
 
         yield return new WaitForSeconds(10);
         // 第三波
-/*        AudioManager.Instance.PlayClip(Config.lastwave);
-*/        for (int i = 0; i < 30; i++)
+        AudioManager.Instance.PlayClip(Config.lastwave);
+        for (int i = 0; i < 30; i++)
         {
             SpawnARandomZombie();
             yield return new WaitForSeconds(1);

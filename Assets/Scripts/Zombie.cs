@@ -65,8 +65,8 @@ public class Zombie : MonoBehaviour
         atkTimer += Time.deltaTime;
         if (atkTimer > atkDuration && currentEatPlant != null)
         {
-/*            AudioManager.Instance.PlayClip(Config.eat);
-*/            currentEatPlant.TakeDamage(atkValue);
+            AudioManager.Instance.PlayClip(Config.eat);
+            currentEatPlant.TakeDamage(atkValue);
             atkTimer = 0;
         }
     }

@@ -26,6 +26,7 @@ public class Sun : MonoBehaviour
 
     void OnMouseDown()
     {
+        AudioManager.Instance.PlayClip(Config.point);
         transform.DOMove(SunManager.Instance.GetSunPointTextPosition(), moveDuration)
             .SetEase(Ease.OutQuad)
             .OnComplete(

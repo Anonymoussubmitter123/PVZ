@@ -47,6 +47,7 @@ public class Plant : MonoBehaviour
     }
     public void TransitionToEnable()
     {
+        AudioManager.Instance.PlayClip(Config.plant);
         plantState = PlantState.Enable;
         GetComponent<Animator>().enabled = true;
         GetComponent<Collider2D>().enabled = true;

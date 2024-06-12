@@ -30,7 +30,7 @@ public class HandManager : MonoBehaviour
     public bool AddPlant(PlantType plantType)
     {
         if (currentPlant != null) return false;
-
+        AudioManager.Instance.PlayClip(Config.seedlift);
         Plant plantPrefab = GetPlantPrefab(plantType);
         if (plantPrefab == null)
         {

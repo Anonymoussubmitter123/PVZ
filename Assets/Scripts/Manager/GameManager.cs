@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour
         cardListUI.DisableCardList();
         SunManager.Instance.StopProduce();
 
-/*        AudioManager.Instance.PlayClip(Config.lose_music);
-*/    }
+        AudioManager.Instance.PlayClip(Config.lose_music);
+    }
     public void GameEndSuccess()
     {
         if (isGameEnd == true) return;
@@ -49,10 +49,11 @@ public class GameManager : MonoBehaviour
         cardListUI.DisableCardList();
         SunManager.Instance.StopProduce();
 
-/*        AudioManager.Instance.PlayClip(Config.win_music);*/
+        AudioManager.Instance.PlayClip(Config.win_music);
     }
     void OnCameraMoveComplete()
     {
+        AudioManager.Instance.PlayClip(Config.readywave);
         prepareUI.Show(OnPrepreUIComplete);
     }
     void OnPrepreUIComplete()
@@ -60,6 +61,6 @@ public class GameManager : MonoBehaviour
         SunManager.Instance.StartProduce();
         ZombieManager.Instance.StartSpawn();
         cardListUI.ShowCardList();
-/*        AudioManager.Instance.PlayBgm(Config.bgm1);*/
+        AudioManager.Instance.PlayBgm(Config.bgm1);
     }
 }

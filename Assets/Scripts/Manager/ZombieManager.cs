@@ -48,34 +48,34 @@ public class ZombieManager : MonoBehaviour
         spawnState = SpawnState.End;
         foreach (Zombie zombie in zombieList)
         {
-/*            zombie.TransitionToPause();
-*/        }
+            zombie.TransitionToPause();
+        }
     }
 
     IEnumerator SpawnZombie()
     {
         // 第一波
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < 5; i++)
         {
             SpawnARandomZombie();
             yield return new WaitForSeconds(3);
         }
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(10);
         // 第二波
-        for (int i = 0; i < 0; i++)
+        for (int i = 0; i < 10; i++)
         {
             SpawnARandomZombie();
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(2);
         }
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(10);
         // 第三波
 /*        AudioManager.Instance.PlayClip(Config.lastwave);
-*/        for (int i = 0; i < 0; i++)
+*/        for (int i = 0; i < 20; i++)
         {
             SpawnARandomZombie();
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1);
         }
         spawnState = SpawnState.End;
     }

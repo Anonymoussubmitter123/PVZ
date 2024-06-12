@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
 
     public PrepareUI prepareUI;
     public CardListUI cardListUI;
-/*    public FailUI failUI;
-    public WinUI winUI;*/
-
+    public FailUI failUI;
+/*    public WinUI winUI;
+*/
     private bool isGameEnd = false;
 
 
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
             new Vector3[] { currentPositon, new Vector3(5, 0, -10), currentPositon },
             4, PathType.Linear).OnComplete(OnCameraMoveComplete);
     }
-/*    public void GameEndFail()
+    public void GameEndFail()
     {
         if (isGameEnd == true) return;
         isGameEnd = true;
@@ -39,9 +39,9 @@ public class GameManager : MonoBehaviour
         cardListUI.DisableCardList();
         SunManager.Instance.StopProduce();
 
-        AudioManager.Instance.PlayClip(Config.lose_music);
-    }
-    public void GameEndSuccess()
+/*        AudioManager.Instance.PlayClip(Config.lose_music);
+*/    }
+/*    public void GameEndSuccess()
     {
         if (isGameEnd == true) return;
         isGameEnd = true;

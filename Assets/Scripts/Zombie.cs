@@ -80,8 +80,8 @@ public class Zombie : MonoBehaviour
         }
         else if (collision.tag == "House")
         {
-/*            GameManager.Instance.GameEndFail();
-*/        }
+            GameManager.Instance.GameEndFail();
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -101,7 +101,8 @@ public class Zombie : MonoBehaviour
     {
         zombieState = ZombieState.Pause;
         anim.enabled = false;
-    }
+/*        rgd.bodyType = RigidbodyType2D.Static;
+*/    }
     public void TakeDamage(int damage)
     {
         if (currentHP <= 0) return;

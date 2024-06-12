@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     public PrepareUI prepareUI;
     public CardListUI cardListUI;
     public FailUI failUI;
-/*    public WinUI winUI;
-*/
+    public WinUI winUI;
+
     private bool isGameEnd = false;
 
 
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 
 /*        AudioManager.Instance.PlayClip(Config.lose_music);
 */    }
-/*    public void GameEndSuccess()
+    public void GameEndSuccess()
     {
         if (isGameEnd == true) return;
         isGameEnd = true;
@@ -49,8 +49,8 @@ public class GameManager : MonoBehaviour
         cardListUI.DisableCardList();
         SunManager.Instance.StopProduce();
 
-        AudioManager.Instance.PlayClip(Config.win_music);
-    }*/
+/*        AudioManager.Instance.PlayClip(Config.win_music);*/
+    }
     void OnCameraMoveComplete()
     {
         prepareUI.Show(OnPrepreUIComplete);

@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plantType: 0
+  HP: 100
   produceDuration: 10
   sunPrefab: {fileID: 1408151165887714180, guid: acd818b1345161f448abf3d6fa130e76, type: 3}
   jumpMinDistance: 0.3

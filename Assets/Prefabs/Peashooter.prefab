@@ -154,7 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plantType: 1
-  shootDuration: 5
+  HP: 100
+  shootDuration: 2
   shootPointTransform: {fileID: 1463894426137561944}
   peaBulletPrefab: {fileID: 2920405918874553424, guid: da84719a90d980c4f8bea742428c59d6, type: 3}
   bulletSpeed: 10

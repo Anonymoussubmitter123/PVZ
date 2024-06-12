@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class Peashooter : Plant
 {
-    public float shootDuration = 0.5f;
+    public float shootDuration = 1;
     private float shootTimer = 0;
     public Transform shootPointTransform;
     public PeaBullet peaBulletPrefab;
 
-    public float bulletSpeed = 5;
+    public float bulletSpeed = 10;
     public int atkValue = 20;
 
     protected override void EnableUpdate()

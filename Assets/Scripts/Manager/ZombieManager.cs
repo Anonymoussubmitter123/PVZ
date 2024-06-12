@@ -34,8 +34,8 @@ public class ZombieManager : MonoBehaviour
     {
         if (spawnState == SpawnState.End && zombieList.Count == 0)
         {
-/*            GameManager.Instance.GameEndSuccess();
-*/        }
+            GameManager.Instance.GameEndSuccess();
+        }
     }
 
     public void StartSpawn()
@@ -54,8 +54,9 @@ public class ZombieManager : MonoBehaviour
 
     IEnumerator SpawnZombie()
     {
+        yield return new WaitForSeconds(10);
         // 第一波
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 10; i++)
         {
             SpawnARandomZombie();
             yield return new WaitForSeconds(3);
@@ -63,7 +64,7 @@ public class ZombieManager : MonoBehaviour
 
         yield return new WaitForSeconds(10);
         // 第二波
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 20; i++)
         {
             SpawnARandomZombie();
             yield return new WaitForSeconds(2);
@@ -72,7 +73,7 @@ public class ZombieManager : MonoBehaviour
         yield return new WaitForSeconds(10);
         // 第三波
 /*        AudioManager.Instance.PlayClip(Config.lastwave);
-*/        for (int i = 0; i < 20; i++)
+*/        for (int i = 0; i < 30; i++)
         {
             SpawnARandomZombie();
             yield return new WaitForSeconds(1);

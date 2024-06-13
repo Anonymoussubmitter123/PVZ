@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     }
     void GameStart()
     {
+        AudioManager.Instance.PlayBgm(Config.bgm3);
         Vector3 currentPositon = Camera.main.transform.position;
         Camera.main.transform.DOPath(
             new Vector3[] { currentPositon, new Vector3(5, 0, -10), currentPositon },
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameEnd == true) return;
         isGameEnd = true;
+        AudioManager.Instance.StopBgm();
         failUI.Show();
         ZombieManager.Instance.Pause();
         cardListUI.DisableCardList();
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameEnd == true) return;
         isGameEnd = true;
+        AudioManager.Instance.StopBgm();
         winUI.Show();
         cardListUI.DisableCardList();
         SunManager.Instance.StopProduce();

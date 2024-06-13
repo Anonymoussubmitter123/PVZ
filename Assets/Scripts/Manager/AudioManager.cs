@@ -26,9 +26,14 @@ public class AudioManager : MonoBehaviour
         audioSource.clip = ac;
         audioSource.Play();
     }
-    public void PlayClip(string path, float volume = 1)
+    public void PlayClip(string path, float volume = 30)
     {
         AudioClip ac = Resources.Load<AudioClip>(path);
         AudioSource.PlayClipAtPoint(ac, transform.position, volume);
+    }
+    // Õ£÷π“Ù∆µ
+    public void StopBgm()
+    {
+        audioSource.Stop();
     }
 }
